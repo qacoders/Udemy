@@ -15,8 +15,8 @@ public class LaunchAppTest {
 	public void testLaunch() throws Exception{
 		DesiredCapabilities capabilities=new DesiredCapabilities();
 		capabilities.setCapability("automationName", "Appium");
-		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("platformVersion","4.3");
+		capabilities.setCapability("platformName", System.getProperty("platformName"));
+		capabilities.setCapability("platformVersion",System.getProperty("platformVersion"));
 		capabilities.setCapability("deviceName","SAMSUNG-SGH-I337");
 		capabilities.setCapability("app","C:\\Users\\srikanthvejendla\\Downloads\\selendroid-test-app-0.12.0.apk");
 		capabilities.setCapability("appPackage","io.selendroid.testapp");
